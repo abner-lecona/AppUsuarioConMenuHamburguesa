@@ -12,16 +12,16 @@
         tools:layout="@layout/fragment_home" />
 
     <fragment
-        android:id="@+id/nav_gallery"
-        android:name="mx.rmr.menuhamburguesa.ui.gallery.GalleryFragment"
+        android:id="@+id/consultarInfo"
+        android:name="mx.rmr.menuhamburguesa.ui.gallery.InfoFragment"
         android:label="@string/menu_info"
-        tools:layout="@layout/fragment_gallery" />
+        tools:layout="@layout/fragment_info" />
 
     <fragment
-        android:id="@+id/nav_slideshow"
-        android:name="mx.rmr.menuhamburguesa.ui.slideshow.SlideshowFragment"
+        android:id="@+id/calificarComedor"
+        android:name="mx.rmr.menuhamburguesa.ui.slideshow.CalificarComedorFragment"
         android:label="@string/menu_calificar"
-        tools:layout="@layout/fragment_slideshow" />
+        tools:layout="@layout/fragment_calfica_comedores" />
     <fragment
         android:id="@+id/principalFragment"
         android:name="mx.rmr.menuhamburguesa.view.PrincipalFragment"
