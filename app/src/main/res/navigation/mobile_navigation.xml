@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@id/principalFragment">
+
+    <fragment
+        android:id="@+id/nav_home"
+        android:name="mx.rmr.menuhamburguesa.ui.home.HomeFragment"
+        android:label="@string/menu_home"
+        tools:layout="@layout/fragment_home" />
+
+    <fragment
+        android:id="@+id/nav_gallery"
+        android:name="mx.rmr.menuhamburguesa.ui.gallery.GalleryFragment"
+        android:label="@string/menu_info"
+        tools:layout="@layout/fragment_gallery" />
+
+    <fragment
+        android:id="@+id/nav_slideshow"
+        android:name="mx.rmr.menuhamburguesa.ui.slideshow.SlideshowFragment"
+        android:label="@string/menu_calificar"
+        tools:layout="@layout/fragment_slideshow" />
+    <fragment
+        android:id="@+id/principalFragment"
+        android:name="mx.rmr.menuhamburguesa.view.PrincipalFragment"
+        android:label="fragment_principal"
+        tools:layout="@layout/fragment_principal" >
+        <action
+            android:id="@+id/action_principalFragment_to_nav_home"
+            app:destination="@id/nav_home" />
+        <action
+            android:id="@+id/action_principalFragment_to_mapasFragment"
+            app:destination="@id/mapasFragment" />
+        <action
+            android:id="@+id/action_principalFragment_to_registrarseFragment"
+            app:destination="@id/registrarseFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/mapasFragment"
+        android:name="mx.rmr.menuhamburguesa.view.MapasFragment"
+        android:label="fragment_mapas"
+        tools:layout="@layout/fragment_mapas" />
+    <fragment
+        android:id="@+id/registrarseFragment"
+        android:name="mx.rmr.menuhamburguesa.view.RegistrarseFragment"
+        android:label="fragment_registrarse"
+        tools:layout="@layout/fragment_registrarse" />
+</navigation>
