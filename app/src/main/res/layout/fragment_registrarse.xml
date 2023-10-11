@@ -198,9 +198,9 @@
             android:layout_width="325dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="32dp"
-            android:backgroundTint="#000000"
+            android:backgroundTint="#CD6789"
             android:gravity="center"
-            android:text="Button" />
+            android:text="Registrarse" />
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
