@@ -48,12 +48,12 @@ class PrincipalFragment : Fragment() {
             findNavController().navigate(R.id.action_principalFragment_to_registrarseFragment)
         }
     }
-    val usuarioPrueba = Usuario("Alonso", "Segura", "De Lucio", "LENAtest13",
-        "Mexico", "M", "2003-05-25","Persona perteneciente al colectivo LGBTQ+", "5521127409",
-        "max_lecona@hotmail.com" )
+//    val usuarioPrueba = Usuario("Alonso", "Segura", "De Lucio", "LENAtest13",
+//        "Mexico", "M", "2003-05-25","Persona perteneciente al colectivo LGBTQ+", "5521127409",
+//        "max_lecona@hotmail.com" )
 
     override fun onStart() {
         super.onStart()
-        viewModel.registrarUsuario(usuarioPrueba)
+        //viewModel.registrarUsuario(usuarioPrueba)
     }
 }

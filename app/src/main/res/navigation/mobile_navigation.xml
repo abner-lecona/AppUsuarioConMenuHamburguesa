@@ -6,6 +6,22 @@
     app:startDestination="@id/principalFragment">
 
     <fragment
+        android:id="@+id/principalFragment"
+        android:name="mx.rmr.menuhamburguesa.view.PrincipalFragment"
+        android:label="@string/menu_Inicio"
+        tools:layout="@layout/fragment_principal" >
+        <action
+            android:id="@+id/action_principalFragment_to_nav_home"
+            app:destination="@id/nav_home" />
+        <action
+            android:id="@+id/action_principalFragment_to_mapasFragment"
+            app:destination="@id/mapasFragment" />
+        <action
+            android:id="@+id/action_principalFragment_to_registrarseFragment"
+            app:destination="@id/registrarseFragment" />
+    </fragment>
+
+    <fragment
         android:id="@+id/nav_home"
         android:name="mx.rmr.menuhamburguesa.ui.home.HomeFragment"
         android:label="@string/menu_home"
@@ -23,28 +39,15 @@
         android:label="@string/menu_calificar"
         tools:layout="@layout/fragment_calfica_comedores" />
     <fragment
-        android:id="@+id/principalFragment"
-        android:name="mx.rmr.menuhamburguesa.view.PrincipalFragment"
-        android:label="fragment_principal"
-        tools:layout="@layout/fragment_principal" >
-        <action
-            android:id="@+id/action_principalFragment_to_nav_home"
-            app:destination="@id/nav_home" />
-        <action
-            android:id="@+id/action_principalFragment_to_mapasFragment"
-            app:destination="@id/mapasFragment" />
-        <action
-            android:id="@+id/action_principalFragment_to_registrarseFragment"
-            app:destination="@id/registrarseFragment" />
-    </fragment>
-    <fragment
         android:id="@+id/mapasFragment"
         android:name="mx.rmr.menuhamburguesa.view.MapasFragment"
-        android:label="fragment_mapas"
+        android:label="@string/menu_mapas"
         tools:layout="@layout/fragment_mapas" />
+
     <fragment
         android:id="@+id/registrarseFragment"
         android:name="mx.rmr.menuhamburguesa.view.RegistrarseFragment"
         android:label="fragment_registrarse"
         tools:layout="@layout/fragment_registrarse" />
+
 </navigation>

@@ -12,4 +12,5 @@
     <string name="menu_calificar">Calificar comedor</string>
     <string name="menu_mapas">Consultar Mapas</string>
     <string name="menu_cerrarSesion">Cerrar Sesion</string>
+    <string name="menu_Inicio">Menu de Inicio</string>
 </resources>

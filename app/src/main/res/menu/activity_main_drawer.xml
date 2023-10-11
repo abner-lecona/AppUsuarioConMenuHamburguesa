@@ -17,13 +17,12 @@
             android:icon="@drawable/ic_menu_slideshow"
             android:title="@string/menu_calificar" />
         <item
-            android:id="@+id/mapasComdeores"
+            android:id="@+id/mapasFragment"
             android:icon="@android:drawable/star_big_off"
             android:title="@string/menu_mapas" />
         <item
             android:id="@+id/cerrarSesion"
             android:icon="@drawable/ic_menu_gallery"
             android:title="@string/menu_cerrarSesion" />
-
     </group>
 </menu>
