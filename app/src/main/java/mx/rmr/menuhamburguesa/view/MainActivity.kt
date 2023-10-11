@@ -1,8 +1,11 @@
 package mx.rmr.menuhamburguesa.view
 
+import android.content.Context
 import android.os.Bundle
+import android.util.AttributeSet
 import android.view.Menu
-import com.google.android.material.snackbar.Snackbar
+import android.view.View
+import androidx.activity.viewModels
 import com.google.android.material.navigation.NavigationView
 import androidx.navigation.findNavController
 import androidx.navigation.ui.AppBarConfiguration
@@ -13,11 +16,15 @@ import androidx.drawerlayout.widget.DrawerLayout
 import androidx.appcompat.app.AppCompatActivity
 import mx.rmr.menuhamburguesa.R
 import mx.rmr.menuhamburguesa.databinding.ActivityMainBinding
+import mx.rmr.menuhamburguesa.model.Usuario
+import mx.rmr.menuhamburguesa.viewmodel.MainActivityVM
+import java.time.LocalDate
 
 class MainActivity : AppCompatActivity() {
 
     private lateinit var appBarConfiguration: AppBarConfiguration
     private lateinit var binding: ActivityMainBinding
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -56,4 +63,5 @@ class MainActivity : AppCompatActivity() {
         val navController = findNavController(R.id.nav_host_fragment_content_main)
         return navController.navigateUp(appBarConfiguration) || super.onSupportNavigateUp()
     }
+
 }

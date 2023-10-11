@@ -1,15 +1,22 @@
 package mx.rmr.menuhamburguesa.view
 
+import android.content.Context
 import android.os.Bundle
+import android.util.AttributeSet
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.activity.viewModels
+import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
 import mx.rmr.menuhamburguesa.R
 import mx.rmr.menuhamburguesa.databinding.FragmentPrincipalBinding
+import mx.rmr.menuhamburguesa.model.Usuario
+import mx.rmr.menuhamburguesa.viewmodel.MainActivityVM
 
 class PrincipalFragment : Fragment() {
+    private val viewModel: MainActivityVM by viewModels()
     private lateinit var binding: FragmentPrincipalBinding
 
     override fun onCreateView(
@@ -40,5 +47,13 @@ class PrincipalFragment : Fragment() {
         binding.txtRegistrarse.setOnClickListener {
             findNavController().navigate(R.id.action_principalFragment_to_registrarseFragment)
         }
+    }
+    val usuarioPrueba = Usuario("Alonso", "Segura", "De Lucio", "LENAtest13",
+        "Mexico", "M", "2003-05-25","Persona perteneciente al colectivo LGBTQ+", "5521127409",
+        "max_lecona@hotmail.com" )
+
+    override fun onStart() {
+        super.onStart()
+        viewModel.registrarUsuario(usuarioPrueba)
     }
 }
