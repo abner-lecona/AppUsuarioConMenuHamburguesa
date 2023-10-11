@@ -42,7 +42,7 @@ class PrincipalFragment : Fragment() {
             findNavController().navigate(R.id.action_principalFragment_to_nav_home)
         }
         binding.imgMapa.setOnClickListener {
-            findNavController().navigate(R.id.action_principalFragment_to_mapasFragment)
+            findNavController().navigate(R.id.action_principalFragment_to_mapaInicioFragment)
         }
         binding.txtRegistrarse.setOnClickListener {
             findNavController().navigate(R.id.action_principalFragment_to_registrarseFragment)

@@ -1,4 +1,4 @@
-package mx.rmr.menuhamburguesa.ui.slideshow
+package mx.rmr.menuhamburguesa.ui.calificarcomedor
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData

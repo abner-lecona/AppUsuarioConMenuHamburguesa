@@ -10,11 +10,11 @@
 
     <LinearLayout
         android:id="@+id/linearLayout"
-        android:layout_width="0dp"
+        android:layout_width="200dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
+        android:layout_marginStart="32dp"
         android:layout_marginTop="32dp"
-        android:layout_marginEnd="16dp"
+        android:layout_marginEnd="32dp"
         android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -22,16 +22,16 @@
 
         <ImageView
             android:id="@+id/imgDIF"
-            android:layout_width="40dp"
-            android:layout_height="120dp"
+            android:layout_width="20dp"
+            android:layout_height="70dp"
             android:layout_weight="1"
             android:scaleType="fitCenter"
-            app:srcCompat="@drawable/diflogo" />
+            app:srcCompat="@drawable/logodif" />
 
         <ImageView
             android:id="@+id/imgNutriRed"
-            android:layout_width="40dp"
-            android:layout_height="120dp"
+            android:layout_width="20dp"
+            android:layout_height="70dp"
             android:layout_weight="1"
             android:scaleType="fitCenter"
             app:srcCompat="@drawable/nutrired" />
@@ -41,9 +41,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="32dp"
         android:layout_marginEnd="16dp"
-        android:layout_marginBottom="32dp"
+        android:layout_marginBottom="45dp"
         android:layout_weight="1"
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -94,7 +93,7 @@
                 <com.google.android.material.textfield.TextInputEditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="Apellido Maternoi" />
+                    android:hint="Apellido Materno" />
             </com.google.android.material.textfield.TextInputLayout>
         </LinearLayout>
 

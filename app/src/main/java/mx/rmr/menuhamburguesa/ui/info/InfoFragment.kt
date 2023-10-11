@@ -1,4 +1,4 @@
-package mx.rmr.menuhamburguesa.ui.slideshow
+package mx.rmr.menuhamburguesa.ui.info
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -6,11 +6,11 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
-import mx.rmr.menuhamburguesa.databinding.FragmentCalficaComedoresBinding
+import mx.rmr.menuhamburguesa.databinding.FragmentInfoBinding
 
-class CalificarComedorFragment : Fragment() {
+class InfoFragment : Fragment() {
 
-    private var _binding: FragmentCalficaComedoresBinding? = null
+    private var _binding: FragmentInfoBinding? = null
 
     // This property is only valid between onCreateView and
     // onDestroyView.
@@ -21,11 +21,16 @@ class CalificarComedorFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        val calificarComedorVM =
-            ViewModelProvider(this).get(CalificarComedorVM::class.java)
+        val infoVM =
+            ViewModelProvider(this).get(InfoVM::class.java)
 
-        _binding = FragmentCalficaComedoresBinding.inflate(inflater, container, false)
+        _binding = FragmentInfoBinding.inflate(inflater, container, false)
         val root: View = binding.root
+
+//        val textView: TextView = binding.t
+//        infoVM.text.observe(viewLifecycleOwner) {
+//            textView.text = it
+//        }
         return root
     }
 

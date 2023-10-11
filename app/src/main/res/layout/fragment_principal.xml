@@ -11,9 +11,9 @@
         android:id="@+id/linearLayout"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
+        android:layout_marginStart="80dp"
         android:layout_marginTop="32dp"
-        android:layout_marginEnd="16dp"
+        android:layout_marginEnd="80dp"
         android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -21,16 +21,16 @@
 
         <ImageView
             android:id="@+id/imgDIF"
-            android:layout_width="40dp"
-            android:layout_height="120dp"
+            android:layout_width="60dp"
+            android:layout_height="100dp"
             android:layout_weight="1"
             android:scaleType="fitCenter"
-            app:srcCompat="@drawable/diflogo" />
+            app:srcCompat="@drawable/logodif" />
 
         <ImageView
             android:id="@+id/imgNutriRed"
-            android:layout_width="40dp"
-            android:layout_height="120dp"
+            android:layout_width="60dp"
+            android:layout_height="100dp"
             android:layout_weight="1"
             android:scaleType="fitCenter"
             app:srcCompat="@drawable/nutrired" />
@@ -109,7 +109,8 @@
             android:layout_weight="1"
             android:backgroundTint="@null"
             android:scaleType="centerCrop"
-            android:src="@drawable/localizacion" />
+            android:src="@drawable/localizacion"
+            app:srcCompat="@drawable/localizaciones" />
 
         <TextView
             android:id="@+id/textView"
@@ -119,5 +120,15 @@
             android:text="Comedores"
             android:textAlignment="center" />
     </LinearLayout>
+
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Bienvendio a NutriRed Atizapan Usuarios"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
