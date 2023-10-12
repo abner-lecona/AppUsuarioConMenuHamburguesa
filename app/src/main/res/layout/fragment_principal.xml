@@ -79,7 +79,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="@font/poppins"
-            android:text="cdcd¿Aún no estás registrado?" />
+            android:text="¿Aún no estás registrado?" />
 
         <TextView
             android:id="@+id/txtRegistrarse"
@@ -111,8 +111,7 @@
             android:layout_weight="1"
             android:backgroundTint="@null"
             android:scaleType="centerCrop"
-            android:src="@drawable/localizacion"
-            app:srcCompat="@drawable/localizaciones" />
+            android:src="@drawable/localizaciones" />
 
         <TextView
             android:id="@+id/textView"

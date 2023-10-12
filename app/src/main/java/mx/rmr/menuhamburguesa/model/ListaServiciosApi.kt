@@ -8,4 +8,5 @@ interface ListaServiciosApi
 {
     @POST("/registrarUsuarioP")
     fun registrarUsuario(@Body nuevoUsuario:Usuario): Call<Any>
+
 }
