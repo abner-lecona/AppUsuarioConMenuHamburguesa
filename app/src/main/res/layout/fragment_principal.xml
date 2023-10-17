@@ -11,9 +11,9 @@
         android:id="@+id/linearLayout"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="80dp"
+        android:layout_marginStart="16dp"
         android:layout_marginTop="32dp"
-        android:layout_marginEnd="80dp"
+        android:layout_marginEnd="16dp"
         android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -25,15 +25,7 @@
             android:layout_height="100dp"
             android:layout_weight="1"
             android:scaleType="fitCenter"
-            app:srcCompat="@drawable/logodif" />
-
-        <ImageView
-            android:id="@+id/imgNutriRed"
-            android:layout_width="60dp"
-            android:layout_height="100dp"
-            android:layout_weight="1"
-            android:scaleType="fitCenter"
-            app:srcCompat="@drawable/nutrired" />
+            app:srcCompat="@drawable/banner" />
     </LinearLayout>
 
     <com.google.android.material.textfield.TextInputLayout
