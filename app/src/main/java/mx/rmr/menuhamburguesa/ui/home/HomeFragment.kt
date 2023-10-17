@@ -1,17 +1,29 @@
 package mx.rmr.menuhamburguesa.ui.home
 
+import android.content.Context
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ImageView
 import android.widget.TextView
 import androidx.fragment.app.Fragment
+import androidx.fragment.app.viewModels
 import androidx.lifecycle.ViewModelProvider
+import androidx.navigation.fragment.navArgs
 import mx.rmr.menuhamburguesa.databinding.FragmentHomeBinding
+import mx.rmr.menuhamburguesa.model.Usuario
+import mx.rmr.menuhamburguesa.viewmodel.PrincipalVM
 
 class HomeFragment : Fragment() {
 
+    private var dataChangeListener: DataChangeListener? = null
+
     private var _binding: FragmentHomeBinding? = null
+
+    private val args: HomeFragmentArgs by navArgs()
+
+    private val viewModel: HomeViewModel by viewModels()
 
     // This property is only valid between onCreateView and
     // onDestroyView.
@@ -35,8 +47,53 @@ class HomeFragment : Fragment() {
         return root
     }
 
-    override fun onDestroyView() {
+    override fun onStart() {
+        super.onStart()
+        var usuarioActual = args.usuarioActual
+        binding.tvBienvenida.setText("¡Hola, ${usuarioActual.Nombre}!")
+        binding.tvIdUsuario.setText("No. Usuario ${usuarioActual.IDUsuario}")
+        binding.tvNombreCompleto.setText("${usuarioActual.Nombre} ${usuarioActual.Apellido1} ${usuarioActual.Apellido2}")
+
+        //Prueba QR
+        val ssid = "TuSSID"
+        val password = "TuContraseña"
+        val qrCodeBitmap = viewModel.getQrCodeBitmap(ssid, password)
+
+//        val qrCodeImageView = findViewById<ImageView>(R.id.qrCodeImageView)
+        binding.qrCodeImageView.setImageBitmap(qrCodeBitmap)
+        someFunction()
+
+
+    }
+
+
+    interface DataChangeListener {
+        fun onDataChanged(usuario: Usuario)
+    }
+
+    override fun onAttach(context: Context) {
+        super.onAttach(context)
+        if (context is DataChangeListener) {
+            dataChangeListener = context
+        } else {
+            throw IllegalArgumentException("Activity must implement DataChangeListener")
+        }
+    }
+
+    // Llama a esta función para actualizar los datos en el Navigation Drawer Header
+    fun updateDataInNavHeader(usuario: Usuario) {
+        dataChangeListener?.onDataChanged(usuario)
+    }
+
+    fun someFunction() {
+        val usuario = args.usuarioActual
+        updateDataInNavHeader(usuario)
+    }
+
+        override fun onDestroyView() {
         super.onDestroyView()
         _binding = null
     }
+
+
 }

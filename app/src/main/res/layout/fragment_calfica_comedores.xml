@@ -46,18 +46,18 @@
         app:layout_constraintTop_toBottomOf="@+id/linearLayout">
 
         <Spinner
-            android:id="@+id/spinner"
+            android:id="@+id/spinnerComedores"
             android:layout_width="match_parent"
             android:layout_height="match_parent" />
 
         <EditText
-            android:id="@+id/editTextDate2"
+            android:id="@+id/etFechaComedores"
             android:layout_width="300dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="18dp"
             android:ems="10"
             android:hint="Fecha"
-            android:inputType="date"
+            android:inputType="datetime|date"
             android:minHeight="48dp" />
     </LinearLayout>
 
@@ -82,7 +82,7 @@
             android:orientation="vertical">
 
             <TextView
-                android:id="@+id/textView6"
+                android:id="@+id/tvNombreCompleto"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/poppins"
@@ -90,7 +90,7 @@
                 android:textSize="16sp" />
 
             <RatingBar
-                android:id="@+id/ratingBar2"
+                android:id="@+id/rbRapidezComedor"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:stepSize="1"
@@ -113,7 +113,7 @@
                 android:textSize="16sp" />
 
             <RatingBar
-                android:id="@+id/ratingBar"
+                android:id="@+id/rbComidaComedor"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:stepSize="1"
@@ -136,7 +136,7 @@
                 android:textSize="16sp" />
 
             <RatingBar
-                android:id="@+id/ratingBar3"
+                android:id="@+id/rbLimpiezaComedor"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:stepSize="1"
@@ -154,13 +154,14 @@
                 android:layout_height="wrap_content">
 
                 <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etComentarioComedor"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="Comentario" />
             </com.google.android.material.textfield.TextInputLayout>
 
             <Button
-                android:id="@+id/button"
+                android:id="@+id/btnCalificarComedor"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"

@@ -25,19 +25,31 @@
         android:id="@+id/nav_home"
         android:name="mx.rmr.menuhamburguesa.ui.home.HomeFragment"
         android:label="@string/menu_home"
-        tools:layout="@layout/fragment_home" />
+        tools:layout="@layout/fragment_home" >
+        <argument
+            android:name="usuarioActual"
+            app:argType="mx.rmr.menuhamburguesa.model.Usuario" />
+    </fragment>
 
     <fragment
         android:id="@+id/consultarInfo"
         android:name="mx.rmr.menuhamburguesa.ui.info.InfoFragment"
         android:label="@string/menu_info"
-        tools:layout="@layout/fragment_info" />
+        tools:layout="@layout/fragment_info" >
+        <argument
+            android:name="usuario"
+            app:argType="mx.rmr.menuhamburguesa.model.Usuario" />
+    </fragment>
 
     <fragment
         android:id="@+id/calificarComedor"
         android:name="mx.rmr.menuhamburguesa.ui.calificarcomedor.CalificarComedorFragment"
         android:label="@string/menu_calificar"
-        tools:layout="@layout/fragment_calfica_comedores" />
+        tools:layout="@layout/fragment_calfica_comedores" >
+        <argument
+            android:name="usuario"
+            app:argType="mx.rmr.menuhamburguesa.model.Usuario" />
+    </fragment>
     <fragment
         android:id="@+id/mapasFragment"
         android:name="mx.rmr.menuhamburguesa.view.MapasFragment"
@@ -48,7 +60,11 @@
         android:id="@+id/registrarseFragment"
         android:name="mx.rmr.menuhamburguesa.view.RegistrarseFragment"
         android:label="@string/menu_registrarse"
-        tools:layout="@layout/fragment_registrarse" />
+        tools:layout="@layout/fragment_registrarse" >
+        <action
+            android:id="@+id/action_registrarseFragment_to_nav_home"
+            app:destination="@id/nav_home" />
+    </fragment>
     <fragment
         android:id="@+id/mapaInicioFragment"
         android:name="mx.rmr.menuhamburguesa.view.MapaInicioFragment"

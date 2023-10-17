@@ -38,6 +38,7 @@
     </LinearLayout>
 
     <LinearLayout
+        android:id="@+id/linearLayout11"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
@@ -62,6 +63,7 @@
                 android:layout_height="match_parent">
 
                 <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/tiNombre"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="Nombre" />
@@ -81,6 +83,7 @@
                 android:layout_height="match_parent">
 
                 <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/tiApellido1"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="Apellido Paterno" />
@@ -91,6 +94,7 @@
                 android:layout_height="match_parent">
 
                 <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/tiApellido2"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="Apellido Materno" />
@@ -110,6 +114,7 @@
                 android:layout_height="match_parent">
 
                 <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/tiCURP"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="CURP" />
@@ -145,13 +150,13 @@
             android:orientation="horizontal">
 
             <EditText
-                android:id="@+id/editTextDate"
+                android:id="@+id/etFechaNacimiento"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:ems="10"
                 android:hint="Fecha de Nacimiento"
-                android:inputType="date" />
+                android:inputType="datetime|date" />
         </LinearLayout>
 
         <LinearLayout
@@ -161,7 +166,7 @@
             android:orientation="horizontal">
 
             <EditText
-                android:id="@+id/editTextNumber"
+                android:id="@+id/etCelular"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -187,6 +192,7 @@
                 android:layout_height="match_parent">
 
                 <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etCorreo"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="Correo Electronico" />
@@ -202,5 +208,15 @@
             android:gravity="center"
             android:text="Registrarse" />
     </LinearLayout>
+
+    <ProgressBar
+        android:id="@+id/pbEnvioDatos"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

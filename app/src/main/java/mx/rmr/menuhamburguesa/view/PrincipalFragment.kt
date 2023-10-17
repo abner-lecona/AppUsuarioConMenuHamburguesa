@@ -14,9 +14,10 @@ import mx.rmr.menuhamburguesa.R
 import mx.rmr.menuhamburguesa.databinding.FragmentPrincipalBinding
 import mx.rmr.menuhamburguesa.model.Usuario
 import mx.rmr.menuhamburguesa.viewmodel.MainActivityVM
+import mx.rmr.menuhamburguesa.viewmodel.PrincipalVM
 
 class PrincipalFragment : Fragment() {
-    private val viewModel: MainActivityVM by viewModels()
+    private val viewModel: PrincipalVM by viewModels()
     private lateinit var binding: FragmentPrincipalBinding
 
     override fun onCreateView(
@@ -30,6 +31,7 @@ class PrincipalFragment : Fragment() {
     // Crea la vista e inicializa los Eventos y Observables
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        binding.pbInicioSesion.visibility = View.GONE
         registrarEventos()
         //registrarObservables()
     }
@@ -39,7 +41,20 @@ class PrincipalFragment : Fragment() {
 
         // Evento de cuando el usuario da clic en el botón del mapa
         binding.btnEntrar.setOnClickListener {
-            findNavController().navigate(R.id.action_principalFragment_to_nav_home)
+            val id = binding.etId.text.toString().toInt()
+            binding.pbInicioSesion.visibility = View.VISIBLE
+            android.os.Handler().postDelayed({
+                viewModel.inicioSesionVM(id)
+                viewModel.usuario.observe(viewLifecycleOwner){
+                    if (it != null){
+                        val accion = PrincipalFragmentDirections.actionPrincipalFragmentToNavHome(it)
+                        findNavController().navigate(accion)
+                        println("SIUU")
+                    } else{
+                        println("NO HAY USUARIO JAJA")
+                    }
+                }
+            },4000)
         }
         binding.imgMapa.setOnClickListener {
             findNavController().navigate(R.id.action_principalFragment_to_mapaInicioFragment)
@@ -48,12 +63,5 @@ class PrincipalFragment : Fragment() {
             findNavController().navigate(R.id.action_principalFragment_to_registrarseFragment)
         }
     }
-//    val usuarioPrueba = Usuario("Alonso", "Segura", "De Lucio", "LENAtest13",
-//        "Mexico", "M", "2003-05-25","Persona perteneciente al colectivo LGBTQ+", "5521127409",
-//        "max_lecona@hotmail.com" )
 
-    override fun onStart() {
-        super.onStart()
-        //viewModel.registrarUsuario(usuarioPrueba)
-    }
 }
