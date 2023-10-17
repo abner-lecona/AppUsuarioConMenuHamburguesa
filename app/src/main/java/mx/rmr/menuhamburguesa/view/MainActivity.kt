@@ -52,7 +52,7 @@ class MainActivity : AppCompatActivity(), HomeFragment.DataChangeListener {
         appBarConfiguration = AppBarConfiguration(
             setOf(
                 R.id.nav_home, R.id.consultarInfo, R.id.calificarComedor,
-                R.id.mapasFragment, R.id.cerrarSesion
+                R.id.mapasFragment, R.id.menuFragment ,R.id.cerrarSesion
             ), drawerLayout
         )
         setupActionBarWithNavController(navController, appBarConfiguration)

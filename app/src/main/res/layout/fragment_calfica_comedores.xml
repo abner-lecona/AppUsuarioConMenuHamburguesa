@@ -6,9 +6,8 @@
     android:layout_height="match_parent"
     tools:context=".ui.calificarcomedor.CalificarComedorFragment">
 
-    <LinearLayout
-        android:id="@+id/linearLayout"
-        android:layout_width="200dp"
+    <ScrollView
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
         android:layout_marginTop="32dp"
@@ -70,16 +69,18 @@
         android:layout_marginBottom="32dp"
         android:gravity="center"
         android:orientation="vertical"
+
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout9">
+        app:layout_constraintTop_toTopOf="parent">
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:gravity="center"
             android:orientation="vertical">
+
 
             <TextView
                 android:id="@+id/tvNombreCompleto"
@@ -91,49 +92,157 @@
 
             <RatingBar
                 android:id="@+id/rbRapidezComedor"
+
+            <LinearLayout
+                android:id="@+id/linearLayout"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                tools:layout_editor_absoluteX="32dp"
+                tools:layout_editor_absoluteY="32dp">
+
+                <ImageView
+                    android:id="@+id/imgDIF"
+                    android:layout_width="20dp"
+                    android:layout_height="70dp"
+                    android:layout_weight="1"
+                    android:scaleType="fitCenter"
+                    app:srcCompat="@drawable/logodif" />
+
+                <ImageView
+                    android:id="@+id/imgNutriRed"
+                    android:layout_width="20dp"
+                    android:layout_height="70dp"
+                    android:layout_weight="1"
+                    android:scaleType="fitCenter"
+                    app:srcCompat="@drawable/nutrired" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linearLayout9"
+
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:stepSize="1"
-                android:theme="@style/RatingBar"/>
-        </LinearLayout>
+                android:layout_marginTop="56dp"
+                android:orientation="vertical"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/linearLayout">
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginTop="16dp"
-            android:gravity="center"
-            android:orientation="vertical">
+                <Spinner
+                    android:id="@+id/spinner"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
 
-            <TextView
-                android:id="@+id/textView5"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/poppins"
-                android:text="Comida"
-                android:textSize="16sp" />
 
             <RatingBar
                 android:id="@+id/rbComidaComedor"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:stepSize="1"
-                android:theme="@style/RatingBar"/>
-        </LinearLayout>
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginTop="16dp"
-            android:gravity="center"
-            android:orientation="vertical">
+                <EditText
+                    android:id="@+id/editTextDate2"
+                    android:layout_width="300dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="18dp"
+                    android:ems="10"
+                    android:hint="Fecha"
+                    android:inputType="date"
+                    android:minHeight="48dp" />
+            </LinearLayout>
 
-            <TextView
-                android:id="@+id/textView7"
-                android:layout_width="wrap_content"
+            <LinearLayout
+                android:layout_width="match_parent"
+
                 android:layout_height="wrap_content"
-                android:fontFamily="@font/poppins"
-                android:text="Limpieza"
-                android:textSize="16sp" />
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="32dp"
+                android:layout_marginEnd="32dp"
+                android:layout_marginBottom="32dp"
+                android:gravity="center"
+                android:orientation="vertical"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/linearLayout9">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/textView6"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/poppins"
+                        android:text="Rapidez de atencion"
+                        android:textSize="16sp" />
+
+                    <RatingBar
+                        android:id="@+id/ratingBar2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:stepSize="1"
+                        android:theme="@style/RatingBar" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="16dp"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/textView5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/poppins"
+                        android:text="Comida"
+                        android:textSize="16sp" />
+
+                    <RatingBar
+                        android:id="@+id/ratingBar"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:stepSize="1"
+                        android:theme="@style/RatingBar" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="16dp"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/textView7"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/poppins"
+                        android:text="Limpieza"
+                        android:textSize="16sp" />
+
+                    <RatingBar
+                        android:id="@+id/ratingBar3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:stepSize="1"
+                        android:theme="@style/RatingBar" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="16dp"
+                    android:orientation="vertical">
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
 
             <RatingBar
                 android:id="@+id/rbLimpiezaComedor"
@@ -143,15 +252,23 @@
                 android:theme="@style/RatingBar"/>
         </LinearLayout>
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginTop="16dp"
-            android:orientation="vertical">
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="Comentario" />
+                    </com.google.android.material.textfield.TextInputLayout>
 
-            <com.google.android.material.textfield.TextInputLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+
+                    <Button
+                        android:id="@+id/button"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:text="Button" />
+                </LinearLayout>
+
+            </LinearLayout>
+
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/etComentarioComedor"
@@ -166,8 +283,8 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
                 android:text="Button" />
+
         </LinearLayout>
 
-    </LinearLayout>
-
+    </ScrollView>
 </androidx.constraintlayout.widget.ConstraintLayout>

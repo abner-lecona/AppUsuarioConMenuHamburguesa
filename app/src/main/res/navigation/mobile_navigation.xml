@@ -70,4 +70,9 @@
         android:name="mx.rmr.menuhamburguesa.view.MapaInicioFragment"
         android:label="@string/menu_inicio_mapas"
         tools:layout="@layout/fragment_mapa_inicio" />
+    <fragment
+        android:id="@+id/menuFragment"
+        android:name="mx.rmr.menuhamburguesa.view.MenuFragment"
+        android:label="@string/menu_menu"
+        tools:layout="@layout/fragment_menu" />
 </navigation>

@@ -17,7 +17,9 @@ import mx.rmr.menuhamburguesa.viewmodel.MainActivityVM
 import mx.rmr.menuhamburguesa.viewmodel.PrincipalVM
 
 class PrincipalFragment : Fragment() {
+
     private val viewModel: PrincipalVM by viewModels()
+
     private lateinit var binding: FragmentPrincipalBinding
 
     override fun onCreateView(

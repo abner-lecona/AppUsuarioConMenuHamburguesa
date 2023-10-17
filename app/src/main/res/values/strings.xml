@@ -15,4 +15,5 @@
     <string name="menu_Inicio">Menu de Inicio</string>
     <string name="menu_registrarse">Registrarse</string>
     <string name="menu_inicio_mapas">Localizacion de Comedores</string>
+    <string name="menu_menu">Menu del dia</string>
 </resources>
